@@ -8,8 +8,14 @@
       "maxDuration": 30
     }
   },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": "introduce\\.hqstar\\.cn" }],
+      "dest": "/moved.html"
+    },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/api/index" }
   ],
   "headers": [
     {

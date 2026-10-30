@@ -39,7 +39,7 @@ export const Route = createFileRoute("/$locale")({
       meta: [
         { title: seo.title },
         { name: "description", content: seo.description },
-        { name: "robots", content: "index,follow" },
+        { name: "robots", content: "noindex,nofollow,noarchive,nosnippet,noimageindex" },
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "Magic Resume" },
         { property: "og:title", content: seo.title },

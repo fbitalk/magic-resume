@@ -3,7 +3,7 @@
   "outputDirectory": "dist/client",
   "functions": {
     "api/index.mjs": {
-      "includeFiles": ["dist/server/**", "public/moved.html"],
+      "includeFiles": "{dist/server/**,public/moved.html}",
       "memory": 1024,
       "maxDuration": 30
     }

@@ -1,4 +1,16 @@
 {
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist/client",
+  "functions": {
+    "api/index.mjs": {
+      "includeFiles": "dist/server/**",
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
